@@ -15,19 +15,65 @@
         .slide
           %h1 HTTP and How the Web Works
         .slide
-          %h2 Slide 2
-          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          %h2 Websites are Magic
+          .intro
+            :markdown
+              * How does a URL result in a web page being loaded?
+              * How does a webpage get turned into what we see in a browser?
         .slide
-          %h2 Slide 3
-          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          %h2 The Server-Client Relationship
+          .left-half
+            %img(src="images/client-server.png" alt="Server Client Relationship")
+          .right-half
+            :markdown
+              * Simple interpretation: There are many clients that access a
+                single server.  This server is accessed because it has content
+                the clients want.
+              * The server can do something or has some resource the client
+                wants.
         .slide
-          %h2 Slide 4
-          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          %h2 Hypertext Transfer Protocol (HTTP)
+          .intro
+            :markdown
+              * Core to all sorts of things besides webpages
+              * Protocol involves a request and response
         .slide
-          %h2 Slide 5
-          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          %h2 HTTP Requests
+          .left-half
+            :markdown
+              (Stolen form wikipedia)
+
+              * HTTP defines nine methods (sometimes referred to as "verbs")
+                indicating the desired action to be performed on the
+                identified resource. 
+              * The available verbs are: HEAD, GET, POST, PUT, DELETE, TRACE,
+                CONNECT, PATCH, OPTIONS
+          .right-half
+            %img(src="images/telnet.png" alt="Telnet on Ubuntu")
+        .slide
+          %h2 HTTP Responses
+          .left-half
+            :markdown
+              An HTTP Response has a code associated with it.  You probably are familar with some already.
+
+              * 1xx: Informational
+              * 2xx: Success
+              * 3xx: Redirect
+              * 4xx: Client error
+              * 5xx: Server error
+          .right-half
+            :markdown
+              A server response:
+
+                  HTTP/1.1 200 OK
+                  Date: Mon, 23 May 2005 22:38:34 GMT
+                  Server: Apache/1.3.3.7 (Unix) (Red-Hat/Linux)
+                  Last-Modified: Wed, 08 Jan 2003 23:11:55 GMT
+                  Etag: "3f80f-1b6-3e1cb03b"
+                  Accept-Ranges: bytes
+                  Content-Length: 438
+                  Connection: close
+                  Content-Type: text/html; charset=UTF-8 
     #footer
       .container
         :markdown

@@ -66,7 +66,9 @@ blockquote, q
 body
   background: #efefef
   color: #333
-  font: 24px / 36px Helvetica, Arial, Sans-Serif
+  font-family: Helvetica, Arial, Sans-Serif
+  font-size: 24px
+  line-height: 1.4em
 
 /* @group -headers
 
@@ -79,7 +81,6 @@ h1, h2, h3, h4, h5, h6
 #header
   h1
     font-size: 18px
-    line-height: 18px
 
 #content
   h1, h2, h3, h4, h5
@@ -88,12 +89,13 @@ h1, h2, h3, h4, h5, h6
     display: block
     color: $accent_color
     font-size: 100px
+    line-height: 1em
     text-align: center
-    line-height: 500px
+    padding: 10%
   h2
     color: darken($accent_color, 8%)
     font-size: 60px
-    line-height: 60px
+    line-height: 1em
 
 /* @end
 
@@ -114,16 +116,20 @@ p, ol, ul, table
   margin: 0 0 30px
 
 ul
-  list-style: square
+  list-style: square inside
 
-li
-  border-bottom: 1px solid rgba(147, 204, 198, 0.2)
-  padding: 20px 0
-  &:first-child
-    padding-top: 0
-  &:last-child
-    border-bottom: none
-    padding-bottom: 0
+ol
+  list-style: inside
+
+#header, #footer
+  li
+    border-bottom: 1px solid rgba(147, 204, 198, 0.2)
+    padding: 20px 0
+    &:first-child
+      padding-top: 0
+    &:last-child
+      border-bottom: none
+      padding-bottom: 0
 
 /* @end
 
@@ -133,7 +139,7 @@ li
   background: rgba(50, 50, 50, 0.5)
   color: #f0f0f0
   font-size: 14px
-  line-height: 14px
+  line-height: 1em
   position: fixed
   width: 100%
   z-index: 10
@@ -171,10 +177,9 @@ label
   top: 40px
 
 .slide
-  padding: 100px
-
-.js .slide
-  position: absolute
+  padding: 5% 4% 7%
+  position: relative
+  overflow: auto
 
 /* @end
 
@@ -231,3 +236,37 @@ label
 /* @end
 
 /* @end
+
+/*
+ * Custom Additons
+ */
+
+.intro
+  $intro_spacing: 4%
+  font-size: 2em
+  line-height: 1em
+  p, ul, ol
+    padding: $intro_spacing $intro_spacing 0
+  ul > li
+    margin-bottom: $intro_spacing
+
+.left-half
+  float: left
+  width: 46%
+  margin: 2% 1% 0
+  position: relative
+  img
+    max-width: 100%
+
+.right-half
+  @extend .left-half
+  float: right
+
+code
+  font-family: monospace
+  font-size: .75em
+  display: block
+  line-height: 1em
+  border: 1px dashed #ddd
+  padding: 1em
+  overflow: auto

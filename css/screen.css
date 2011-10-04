@@ -59,15 +59,16 @@ blockquote, q {
 body {
   background: #efefef;
   color: #333333;
-  font: 24px/36px Helvetica, Arial, Sans-Serif; }
+  font-family: Helvetica, Arial, Sans-Serif;
+  font-size: 24px;
+  line-height: 1.4em; }
 
 /* @group -headers */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
 
 #header h1 {
-  font-size: 18px;
-  line-height: 18px; }
+  font-size: 18px; }
 
 #content h1, #content h2, #content h3, #content h4, #content h5 {
   font-family: Georgia, "Times New Roman", Times, serif; }
@@ -75,12 +76,13 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   color: #ae1f24;
   font-size: 100px;
+  line-height: 1em;
   text-align: center;
-  line-height: 500px; }
+  padding: 10%; }
 #content h2 {
   color: #8b191d;
   font-size: 60px;
-  line-height: 60px; }
+  line-height: 1em; }
 
 /* @end */
 /* @group -links */
@@ -97,14 +99,17 @@ p, ol, ul, table {
   margin: 0 0 30px; }
 
 ul {
-  list-style: square; }
+  list-style: square inside; }
 
-li {
+ol {
+  list-style: inside; }
+
+#header li, #footer li {
   border-bottom: 1px solid rgba(147, 204, 198, 0.2);
   padding: 20px 0; }
-  li:first-child {
+  #header li:first-child, #footer li:first-child {
     padding-top: 0; }
-  li:last-child {
+  #header li:last-child, #footer li:last-child {
     border-bottom: none;
     padding-bottom: 0; }
 
@@ -114,7 +119,7 @@ li {
   background: rgba(50, 50, 50, 0.5);
   color: #f0f0f0;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 1em;
   position: fixed;
   width: 100%;
   z-index: 10; }
@@ -147,10 +152,9 @@ label {
   top: 40px; }
 
 .slide {
-  padding: 100px; }
-
-.js .slide {
-  position: absolute; }
+  padding: 5% 4% 7%;
+  position: relative;
+  overflow: auto; }
 
 /* @end */
 /* @group -pagers */
@@ -204,3 +208,32 @@ label {
 
 /* @end */
 /* @end */
+/* Custom Additons
+ */
+.intro {
+  font-size: 2em;
+  line-height: 1em; }
+  .intro p, .intro ul, .intro ol {
+    padding: 4% 4% 0; }
+  .intro ul > li {
+    margin-bottom: 4%; }
+
+.left-half, .right-half {
+  float: left;
+  width: 46%;
+  margin: 2% 1% 0;
+  position: relative; }
+  .left-half img, .right-half img {
+    max-width: 100%; }
+
+.right-half {
+  float: right; }
+
+code {
+  font-family: monospace;
+  font-size: 0.75em;
+  display: block;
+  line-height: 1em;
+  border: 1px dashed #dddddd;
+  padding: 1em;
+  overflow: auto; }
