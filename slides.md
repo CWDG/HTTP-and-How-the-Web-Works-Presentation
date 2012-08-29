@@ -3,12 +3,12 @@
 ---
 
 ## Your Browser
-*insert screenshot of empty chrome tab*
+![Empty](blank_browser.png)
 
 ---
 
 ## How Does It Work?
-*browser w/ Facebook ==? magnets*
+![Complex](complex_browser.png)
 
 ---
 
@@ -18,20 +18,15 @@
     - Page Markup
     - Clients and Servers
     - Requests and Responses
-- Browser:
-    - Content
-    - Presentation
-    - Interaction
-- Server:
-    - Routing
-    - Controllers
-    - Databases
-    - Templates
+- Detailed Look at Your Browser
+- Detailed Look at the Server
+
 
 ---
 
 ## Vocabulary
-- Not sure what shoudl go here
+- Language we all agree on.
+- Complex topic that requires some lingo.
 
 ---
 
@@ -79,7 +74,7 @@
 ## Browser Specifics
 - Diving Deeper, this time on your machine.
 
-- I want to visit. Where do I begin?
+- I have a page. Where does my browser begin?
 
 ---
 
