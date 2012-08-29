@@ -28,7 +28,7 @@ div.slides {
     div.slides blockquote p {
       font-style: italic;
       font-size: 31.5px;
-      margin: 0.4em 0; }
+      margin: 0 0 0.4em; }
 
 body.expose div.slides.nocontext {
   width: 100%;
@@ -193,7 +193,7 @@ div#current_presenter_notes, div.slide div.presenter_notes, div.slides div.prese
 div.slide p {
   font-size: 35px;
   line-height: 1.3em;
-  margin: 0.5em 0; }
+  margin: 0 0 0.4em; }
 
 /* Slide styles */
 .slide.far-past {
@@ -226,7 +226,7 @@ header {
     color: #050505;
     text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
     margin: 0;
-    padding: 36px 42px 0; }
+    padding: 36px 42px 20px; }
   header h1, header h2, header h3, header h4, header h5, header h6 {
     display: inline;
     font-size: 100%;
@@ -235,7 +235,7 @@ header {
     padding: 0;
     margin: 0; }
   header h2:first-child {
-    margin-top: 0; }
+    margin: 0 0 0.8em; }
 
 section, .slide header:only-child h1 {
   color: #1f1f1f;
@@ -270,12 +270,18 @@ a {
 
 pre {
   font-size: 20px;
-  font-family: Inconsolata, Monaco, Courier, monospace; }
+  line-height: 20px;
+  font-family: Inconsolata, Monaco, Courier, monospace;
+  padding: 0; }
 
-li {
-  padding: 10px 0;
-  font-size: 35px;
-  line-height: 1.3em; }
+ul {
+  padding: 0 0 0 1em;
+  margin: 0; }
+  ul li {
+    padding: 0;
+    margin-bottom: 0.2em;
+    font-size: 35px;
+    line-height: 1.2em; }
 
 .slide header:only-child h1 {
   line-height: 120%;

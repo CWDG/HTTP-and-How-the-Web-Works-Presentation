@@ -34,7 +34,7 @@ div
       p
         font-style: italic
         font-size: .9 * $font_size
-        margin: .4em 0
+        margin: 0 0 .4em
 
 
 body.expose div.slides.nocontext
@@ -210,7 +210,7 @@ div
   &.slide p
     font-size: $font_size
     line-height: 1.3em
-    margin: .5em 0
+    margin: 0 0 0.4em
 
 /* Slide styles
 
@@ -246,7 +246,7 @@ header
     color: darken($font_color, 10%)
     text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px
     margin: 0
-    padding: 36px 42px 0
+    padding: 36px 42px 20px
   h1, h2, h3, h4, h5, h6
     display: inline
     font-size: 100%
@@ -255,7 +255,7 @@ header
     padding: 0
     margin: 0
   h2:first-child
-    margin-top: 0
+    margin: 0 0 .8em
 
 section, .slide header:only-child h1
   color: $font_color
@@ -291,12 +291,19 @@ a
 
 pre
   font-size: 20px
+  line-height: 20px
   font-family: Inconsolata, Monaco, Courier, monospace
+  padding: 0
 
-li
-  padding: 10px 0
-  font-size: $font_size
-  line-height: 1.3em
+ul
+  padding: 0 0 0 1em
+  margin: 0
+  
+  li
+    padding: 0
+    margin-bottom: .2em
+    font-size: $font_size
+    line-height: 1.2em
 
 .slide header:only-child h1
   line-height: 120%
